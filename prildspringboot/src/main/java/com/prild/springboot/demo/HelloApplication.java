@@ -5,10 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +18,9 @@ import java.nio.charset.Charset;
         "classpath:httpclient.properties"})
 //,"classpath:redis.properties","classpath:rabbitmq.properties"
 @ComponentScan(basePackages = "com.prild.springboot.demo")
-@SpringBootApplication
 @Configuration
+@ImportResource(value = "classpath:dubbo/dubbo-consumer.xml")
+@SpringBootApplication
 public class HelloApplication {
     @RequestMapping("hello")
     @ResponseBody
