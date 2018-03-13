@@ -21,11 +21,11 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
+    <!--<dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>4.3.7.RELEASE</version>
-    </dependency>
+    </dependency>--><!--由于下面导入了spring-boot-starter-web的依赖，会自动导入一系列的依赖，包括webmvc-->
 
     <!--连接池-->
     <dependency>
@@ -58,8 +58,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.9</source>
-          <target>1.9</target>
+          <source>1.8</source>
+          <target>1.8</target>
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
