@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: prod  #or dev  设置开发或生产环境运行
+#java -jar springboot-easydemo-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod 命令行运行开发环境或生产环境
