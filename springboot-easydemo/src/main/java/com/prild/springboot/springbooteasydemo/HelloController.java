@@ -27,6 +27,14 @@ public class HelloController {
         //return "hello world";
         //return "age:" + age + ",name:" + name;
         //return user.toString();
-        return id.toString() + "," + name;
+        return id.toString() + "," + name + "6";
+    }
+
+    @GetMapping(value = "/hello")
+    public String say2() {
+        //return "hello world";
+        //return "age:" + age + ",name:" + name;
+        //return user.toString();
+        return "hello";
     }
 }
