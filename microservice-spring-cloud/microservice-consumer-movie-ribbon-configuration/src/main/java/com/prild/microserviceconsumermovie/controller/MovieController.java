@@ -20,7 +20,7 @@ public class MovieController {
 
     @GetMapping("/movie/{id}")
     public User findById(@PathVariable Long id){        //VIP   virtual IP  虚拟IP
-        ServiceInstance instance = this.loadBalancerClient.choose("microservice-provider-user2");
+        ServiceInstance instance = this.loadBalancerClient.choose("microservice-provider-user");
         System.out.println("user:" + instance.getHost() + ":" + instance.getPort());
 
         return this.restTemplate.getForObject("http://microservice-provider-user/simple/" + id,User.class);
@@ -28,11 +28,12 @@ public class MovieController {
 
     @GetMapping("/test")
     public String test(){
+        ServiceInstance instance2 = this.loadBalancerClient.choose("microservice-provider-user2");
+        System.out.println("user2:" + instance2.getHost() + ":" + instance2.getPort());
+
         ServiceInstance instance = this.loadBalancerClient.choose("microservice-provider-user");
         System.out.println("user:" + instance.getHost() + ":" + instance.getPort());
 
-        ServiceInstance instance2 = this.loadBalancerClient.choose("microservice-provider-user2");
-        System.out.println("user2:" + instance2.getHost() + ":" + instance2.getPort());
         return "aa";
     }
 
