@@ -39,21 +39,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/microservice-discovery-eureka-ha/src/main/resources/application.yml">
+      <file leaf-file-name="MicroserviceConsumerMovieApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285">
-              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="150">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservice-discovery-eureka-ha/pom.xml">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -85,7 +97,6 @@
         <option value="$PROJECT_DIR$/microservice-discovery-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-discovery-eureka/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieApplication.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/controller/MovieController.java" />
         <option value="$PROJECT_DIR$/microservice-provider-user/src/main/java/com/prild/microserviceprovideruser/MicroserviceProviderUserApplication.java" />
         <option value="$PROJECT_DIR$/microservice-provider-user/src/main/java/com/prild/microserviceprovideruser/Entity/User.java" />
@@ -120,11 +131,13 @@
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize/src/main/java/com/prild/microserviceconsumermovie/config/CustomizeConfiguration.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/microservice-provider-user/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-discovery-eureka-ha/src/main/java/com/prild/microservicediscoveryeureka/MicroserviceDiscoveryEurekaHAApplication.java" />
         <option value="$PROJECT_DIR$/microservice-discovery-eureka-ha/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-discovery-eureka-ha/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/microservice-provider-user/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -249,6 +262,70 @@
             <path>
               <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="microserviceconsumermovie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="microserviceconsumermovie" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="microserviceconsumermovie" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-consumer-movie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
               <item name="microservice-discovery-eureka-ha" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,6 +362,49 @@
               <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
               <item name="microservice-discovery-eureka-ha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-provider-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-provider-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-provider-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-provider-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-provider-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="microserviceprovideruser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-provider-user" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -601,12 +721,12 @@
       <workItem from="1521562106054" duration="2287000" />
       <workItem from="1521564399782" duration="21659000" />
       <workItem from="1521625268313" duration="2888000" />
-      <workItem from="1521645341330" duration="12463000" />
+      <workItem from="1521645341330" duration="16501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44553000" />
+    <option name="totallyTimeSpent" value="48591000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,6 +739,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="376" y="44" width="1064" height="769" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4814815" sideWeight="0.50303555" order="7" side_tool="true" content_ui="tabs" />
@@ -636,7 +757,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52522254" sideWeight="0.49696445" order="13" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52522254" sideWeight="0.49696445" order="13" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -709,30 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservice-provider-user/src/main/java/com/prild/microserviceprovideruser/MicroserviceProviderUserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -800,16 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/TestConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.0/ribbon-loadbalancer-2.2.0.jar!/com/netflix/loadbalancer/AbstractLoadBalancerRule.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -827,13 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-configuration/src/main/java/com/prild/microserviceconsumermovie/feign/Entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -846,16 +926,6 @@
         <state relative-caret-position="-95">
           <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="64" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieRibbonApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,16 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-provider-user/src/main/java/com/prild/microserviceprovideruser/Controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1033,14 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-provider-user/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1065,9 +1117,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-provider-user/src/main/java/com/prild/microserviceprovideruser/Controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservice-discovery-eureka-ha/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="645">
           <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
@@ -1075,7 +1145,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-discovery-eureka-ha/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
+        <state relative-caret-position="-375">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/TestConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieRibbonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-provider-user/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
           <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding />
         </state>
