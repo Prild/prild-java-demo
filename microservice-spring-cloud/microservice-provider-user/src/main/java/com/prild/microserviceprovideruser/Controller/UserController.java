@@ -49,7 +49,7 @@ public class UserController {
         return user;
     }
 
-    // 该请求不会成功
+
     @GetMapping("/get-user")
     public User getUser(User user) {
         return user;
