@@ -1,0 +1,36 @@
+server:
+  port: 8030
+eureka:
+  client:
+    healthckeck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password@localhost:8761/eureka/
+      #defaultZone: http://peer1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      zone: ABC #eureka可以理解的元数据
+      prild: yl    #eureka不能识别，不会影响客户端行为的元数据
+      #lease-renewal-interval-in-seconds: 5  #修改eureka默认心跳周期，建议生产中不修改
+spring:
+  application:
+    name: microservice-hystrix-turbine
+turbine:
+  app-config: microservice-consumer-movie-ribbon-with-hystrix
+  aggregator:
+    clusterConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX
+  #如果要监控的服务需要配置context-path: /xxx，则其eureka也得配置一致的eureka.instance.home-page-url-path，同时trubine也得做下面的配置：
+  #turbine.instanceUriSuffix.APPNAME: /xxx.这样/hystix.steam就有了相应的路径前缀，不会出现404
+#如果配置多个服务的监控,可使用逗号隔开：
+#turbine:
+#  app-config: microservice-consumer-movie-ribbon-with-hystrix,microservice-consumer-movie-ribbon-with-hystrix2
+#  aggregator:
+#    clusterConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX,MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX2
+#如果服务特别多，可以做以下配置：
+#turbine:
+#  app-config: microservice-consumer-movie-ribbon-with-hystrix,microservice-consumer-movie-ribbon-with-hystrix2
+#  aggregator:
+#    clusterConfig: default
+#    clusterNameExpression: "'default'"
