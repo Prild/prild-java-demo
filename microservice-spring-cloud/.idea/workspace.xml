@@ -50,21 +50,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GatewayZuulFilterApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GatewayZuulFilterApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="85">
+              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+              <folding>
+                <element signature="e#414#415#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PreZuulFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/PreZuulFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#599#600#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -98,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/pom.xml" />
@@ -149,6 +171,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java" />
+        <option value="$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/PreZuulFilter.java" />
       </list>
     </option>
   </component>
@@ -177,7 +200,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="318" />
     <option name="y" value="23" />
     <option name="width" value="1122" />
@@ -368,7 +391,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.GatewayZuulFilterApplication">
+    <configuration name="GatewayZuulFilterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.prild.microservicediscoveryeureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.prild.microservicediscoveryeureka.GatewayZuulFilterApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="microservice-gateway-zuul-filter" />
+      <envs />
+    </configuration>
     <configuration name="GatewayZuulRegExpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -615,7 +650,7 @@
       <module name="microservice-provider-user" />
       <envs />
     </configuration>
-    <list size="19">
+    <list size="20">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonConfigurationApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.MicroserviceProviderUserApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieApplication" />
@@ -635,13 +670,15 @@
       <item index="16" class="java.lang.String" itemvalue="Spring Boot.MicroserviceDiscoveryEurekaHAApplication" />
       <item index="17" class="java.lang.String" itemvalue="Spring Boot.MicroserviceGatewayZuulApplication" />
       <item index="18" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulRegExpApplication" />
+      <item index="19" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulFilterApplication" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.HystrixDashBoardApplication" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulRegExpApplication" />
-        <item index="2" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixApplication" />
-        <item index="3" class="java.lang.String" itemvalue="Spring Boot.HystrixTurbineApplication" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulFilterApplication" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.HystrixDashBoardApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulRegExpApplication" />
+        <item index="3" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixApplication" />
+        <item index="4" class="java.lang.String" itemvalue="Spring Boot.HystrixTurbineApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -665,12 +702,12 @@
       <workItem from="1521564399782" duration="21659000" />
       <workItem from="1521625268313" duration="2888000" />
       <workItem from="1521645341330" duration="34233000" />
-      <workItem from="1521799021391" duration="22826000" />
+      <workItem from="1521799021391" duration="26717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89149000" />
+    <option name="totallyTimeSpent" value="93040000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,7 +719,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="318" y="23" width="1122" height="769" extended-state="1" />
+    <frame x="318" y="23" width="1122" height="769" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -736,13 +773,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1117,14 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -1133,18 +1155,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/pom.xml">
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/PreZuulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>

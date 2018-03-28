@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/it-much/config-repo-51cto-video
+
+#对应http服务访问具有以下格式的资源：
+#       /{application}/{profile}[/{label}]
+#       /{application}-{profile}.yml
+#       /{label}/{application}-{profile}.yml
+#       /{application}-{profile}.properties
+#       /{label}/{application}-{profile}.properties
