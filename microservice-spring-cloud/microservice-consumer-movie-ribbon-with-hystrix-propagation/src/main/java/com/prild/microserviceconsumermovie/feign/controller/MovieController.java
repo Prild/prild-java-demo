@@ -25,7 +25,8 @@ public class MovieController {
 
     @GetMapping("/movie/{id}")
     @HystrixCommand(fallbackMethod = "findByIdFallback",commandProperties = @HystrixProperty(name="excution.isolation.strategy",value = "SEMAPHONE"))
-                            //指定该方法的回退方法           //正常情况下不配置，出现异常了再说。如果配置SEMAPHONE(信号量)，那么回退方法会与该方法在一个线程中执行；如果不配则默认是THREAD，回退方法在另一个隔离的线程中执行
+                            //指定该方法的回退方法           //正常情况下不配置，出现异常了再说。如果配置SEMAPHONE(信号量)，
+                                                         // 那么回退方法会与该方法在一个线程中执行；如果不配则默认是THREAD，回退方法在另一个隔离的线程中执行
     public User findById(@PathVariable Long id){        //VIP   virtual IP  虚拟IP
         ServiceInstance instance = this.loadBalancerClient.choose("microservice-provider-user2");
         System.out.println("user:" + instance.getHost() + ":" + instance.getPort());

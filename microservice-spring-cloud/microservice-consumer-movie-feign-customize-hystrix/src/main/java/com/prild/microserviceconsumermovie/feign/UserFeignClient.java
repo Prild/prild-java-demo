@@ -7,7 +7,8 @@ import feign.RequestLine;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "microservice-provider-user2",configuration = CustomizeConfiguration.class,fallback = HystrixClientFallback.class)
+@FeignClient(name = "microservice-provider-user2",configuration = CustomizeConfiguration.class,
+        fallback = HystrixClientFallback.class)
 public interface UserFeignClient {
     //只能是用requestMapping注解
     //@RequestMapping(value = "/simple/{id}",method = RequestMethod.GET)

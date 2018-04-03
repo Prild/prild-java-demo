@@ -34,6 +34,4 @@ public class MovieController {
         System.out.println("user2:" + instance2.getHost() + ":" + instance2.getPort());
         return "aa";
     }
-
-
 }

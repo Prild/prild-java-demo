@@ -12,8 +12,10 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "microservice-provider-user",configuration = TestConfiguration.class)//注释掉此注解可以测试得知 ribbon默认负载均衡算法为轮训
-@ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION,value = ExcludeFromComponentScan.class)})
+//注释掉此注解可以测试得知 ribbon默认负载均衡算法为轮训
+@RibbonClient(name = "microservice-provider-user",configuration = TestConfiguration.class)
+@ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION,
+		value = ExcludeFromComponentScan.class)})
 public class MicroserviceConsumerMovieRibbonApplication {
 
 	@Bean

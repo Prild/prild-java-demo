@@ -53,51 +53,18 @@
       <file leaf-file-name="GatewayZuulFilterApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-              <folding>
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreZuulFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/PreZuulFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
-                <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/resources/application.yml">
+      <file leaf-file-name="GatewayZuulRegExpApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-reg-exp/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulRegExpApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="210">
+              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -121,20 +88,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieFeignHystrixApplication.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallBack.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/FeignClient2Fallback.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallback.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClient.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2Fallback.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/config/Configuration2.java" />
@@ -143,7 +100,6 @@
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/Entity/User.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClientWithFactory.java" />
         <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallBackFactory.java" />
-        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java" />
         <option value="$PROJECT_DIR$/microservice-hystrix-dashboard/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-hystrix-dashboard/src/main/java/com/prild/microservicediscoveryeureka/MicroserviceDiscoveryEurekaApplication.java" />
@@ -172,6 +128,17 @@
         <option value="$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java" />
         <option value="$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/PreZuulFilter.java" />
+        <option value="$PROJECT_DIR$/microservice-provider-user/src/main/java/com/prild/microserviceprovideruser/Controller/UserController.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieRibbonApplication.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/ExcludeFromComponentScan.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClient.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2.java" />
+        <option value="$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java" />
       </list>
     </option>
   </component>
@@ -201,9 +168,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="318" />
+    <option name="x" value="7" />
     <option name="y" value="23" />
-    <option name="width" value="1122" />
+    <option name="width" value="1250" />
     <option name="height" value="769" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -285,6 +252,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,7 +301,42 @@
             <path>
               <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="microservice-gateway-zuul-filter" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-gateway-zuul-reg-exp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-gateway-zuul-reg-exp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-gateway-zuul-reg-exp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-gateway-zuul-reg-exp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-gateway-zuul-reg-exp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="microservicediscoveryeureka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="microservice-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microservice-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-gateway-zuul-reg-exp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -339,10 +345,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -661,21 +663,21 @@
       <item index="7" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonApplication" />
       <item index="8" class="java.lang.String" itemvalue="Spring Boot.ribbonhystrix1" />
       <item index="9" class="java.lang.String" itemvalue="Spring Boot.ribbonhystrix2" />
-      <item index="10" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixApplication" />
-      <item index="11" class="java.lang.String" itemvalue="Spring Boot.HystrixDashBoardApplication" />
-      <item index="12" class="java.lang.String" itemvalue="Spring Boot.HystrixTurbineApplication" />
-      <item index="13" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieFeignCustomizeApplication" />
-      <item index="14" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixPropagationApplication" />
-      <item index="15" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieFeignApplication" />
-      <item index="16" class="java.lang.String" itemvalue="Spring Boot.MicroserviceDiscoveryEurekaHAApplication" />
-      <item index="17" class="java.lang.String" itemvalue="Spring Boot.MicroserviceGatewayZuulApplication" />
+      <item index="10" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieFeignCustomizeApplication" />
+      <item index="11" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixPropagationApplication" />
+      <item index="12" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieFeignApplication" />
+      <item index="13" class="java.lang.String" itemvalue="Spring Boot.MicroserviceDiscoveryEurekaHAApplication" />
+      <item index="14" class="java.lang.String" itemvalue="Spring Boot.MicroserviceGatewayZuulApplication" />
+      <item index="15" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixApplication" />
+      <item index="16" class="java.lang.String" itemvalue="Spring Boot.HystrixDashBoardApplication" />
+      <item index="17" class="java.lang.String" itemvalue="Spring Boot.HystrixTurbineApplication" />
       <item index="18" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulRegExpApplication" />
       <item index="19" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulFilterApplication" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulFilterApplication" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.HystrixDashBoardApplication" />
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.HystrixDashBoardApplication" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulFilterApplication" />
         <item index="2" class="java.lang.String" itemvalue="Spring Boot.GatewayZuulRegExpApplication" />
         <item index="3" class="java.lang.String" itemvalue="Spring Boot.MicroserviceConsumerMovieRibbonHystrixApplication" />
         <item index="4" class="java.lang.String" itemvalue="Spring Boot.HystrixTurbineApplication" />
@@ -703,11 +705,12 @@
       <workItem from="1521625268313" duration="2888000" />
       <workItem from="1521645341330" duration="34233000" />
       <workItem from="1521799021391" duration="26717000" />
+      <workItem from="1522736570687" duration="11372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93040000" />
+    <option name="totallyTimeSpent" value="104412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,7 +722,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="318" y="23" width="1122" height="769" extended-state="0" />
+    <frame x="7" y="23" width="1250" height="769" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -738,12 +741,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42581603" sideWeight="0.49696445" order="13" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11424332" sideWeight="0.49696445" order="13" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30648148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3360927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -764,7 +767,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -773,71 +776,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2Fallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/config/Configuration2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieFeignHystrixFactoryApplication.java">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize/src/main/java/com/prild/microserviceconsumermovie/feign/MicroserviceConsumerMovieFeignCustomizeApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -845,110 +784,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallBackFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-hystrix-dashboard/src/main/java/com/prild/microservicediscoveryeureka/HystrixDashBoardApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-hystrix-dashboard/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-hystrix-dashboard/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallBack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClientWithFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-hystrix-turbine/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-hystrix-turbine/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/java/com/prild/microservicediscoveryeureka/MicroserviceGatewayZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="68" lean-forward="false" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak3">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -956,66 +792,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak2">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="236">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-reg-exp/pom.xml">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieRibbonHystrixApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-reg-exp/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulRegExpApplication.java">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="281">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="42" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-reg-exp/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-362">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak4">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieRibbonHystrixPropagationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="105">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak5">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="349">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-provider-user/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix-propagation/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        <state relative-caret-position="255">
+          <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/config/Configuration2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/MicroserviceConsumerMovieFeignCustomizeApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/config/CustomizeConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/FeignClient2Fallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1023,7 +944,7 @@
     <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieFeignHystrixApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1038,164 +959,248 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrix/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="75">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieFeignHystrixFactoryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/UserFeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/HystrixClientFallBackFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-hystrixfactory/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClientWithFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-hystrix-dashboard/src/main/java/com/prild/microservicediscoveryeureka/HystrixDashBoardApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-hystrix-dashboard/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-hystrix-dashboard/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-hystrix-turbine/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-hystrix-turbine/src/main/java/com/prild/microservicediscoveryeureka/HystrixTurbineApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize/src/main/java/com/prild/microserviceconsumermovie/feign/UserFeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-feign-customize/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/prild/microserviceconsumermovie/MicroserviceConsumerMovieRibbonHystrixApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/prild/microserviceconsumermovie/feign/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.2.7.RELEASE/spring-cloud-netflix-core-1.2.7.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/route/ZuulFallbackProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-fallback/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFallbackApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-fallback/src/main/java/com/prild/microservicediscoveryeureka/fallback/MyFallbackProvider.java">
+    <entry file="file://$PROJECT_DIR$/microservice-hystrix-turbine/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-fallback/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="47" column="21" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="47" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak1">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="-114">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/java/com/prild/microservicediscoveryeureka/MicroserviceGatewayZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul/src/main/resources/application.yml.bak4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-fallback/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-fallback/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFallbackApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/PreZuulFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state relative-caret-position="300">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-fallback/src/main/java/com/prild/microservicediscoveryeureka/fallback/MyFallbackProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/pom.xml">
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-filter/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulFilterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-reg-exp/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-gateway-zuul-reg-exp/src/main/java/com/prild/microservicediscoveryeureka/GatewayZuulRegExpApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding />
         </state>
       </provider>

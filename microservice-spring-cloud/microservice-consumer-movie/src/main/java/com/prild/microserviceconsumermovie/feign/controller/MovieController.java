@@ -13,7 +13,7 @@ public class MovieController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value("${user.userServicePath}")
+    @Value("${user.userServicePath}")   //读取application.yml中的配置
     private String userServicePath;
 
     @GetMapping("/movie/{id}")
