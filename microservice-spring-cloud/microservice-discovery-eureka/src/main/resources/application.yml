@@ -3,7 +3,7 @@ security:
     enable: true
   user:
     name: user
-    password: password
+    password: password2
 server:
   port: 8761
 eureka:

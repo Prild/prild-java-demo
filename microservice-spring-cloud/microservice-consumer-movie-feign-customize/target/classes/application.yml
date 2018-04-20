@@ -13,6 +13,7 @@ spring:
 logging:
   level:
     com.prild.microserviceconsumermovie.feign.UserFeignClient: debug
+#有时候服务刚开启第一次访问时会出现超时的情况解决
 #hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000   #更改超时时间
 hystrix.command.default.execution.timeout.enabled: false    #禁用超时时间
 #feign.hystrix.enabled: false  ##禁用feign的hystrix   解决访问超时
