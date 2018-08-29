@@ -4,8 +4,17 @@ spring:
   cloud:
     config:
       server:
-        git:
-          uri: https://git.oschina.net/it-much/config-repo-51cto-video
+        git:  #方式一：基础使用
+          uri: https://github.com/Prild/config-sync.git
+        #方式二：指定特定的git仓库，application.name为git仓库名称，
+        #----访问格式为：git仓库名称-profile.yml
+        #----建议此时profile的名称不要用"-"链接，因为http访问时只能识别到最后一个"-"，之前所有"-"默认识别为application的名称。使用"pattern"可以指定命中文件名称
+          #uri: https://github.com/Prild/{application}
+  #application:
+    #name: config-sync
+
+          #spring.cloud.config.server.git.search-paths: - 文件夹名称   含文件目录的管理
+
 
 #对应http服务访问具有以下格式的资源：
 #       /{application}/{profile}[/{label}]

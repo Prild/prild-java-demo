@@ -1,11 +1,29 @@
+#启动上下文
 spring:
   cloud:
     config:
-      uri: http://localhost:8080
-      profile: dev
+      uri: http://localhost:8761
+      profile: auth    #"profile" 与config server访问格式中的profile对应
       label: master   #当config server的后端存储的是git时，默认就是master
+      #Located environment: name=aos, profiles=[msn], label=master
+##对应http服务访问具有以下格式的资源：
+##       /{application}/{profile}[/{label}]
+##       /{application}-{profile}.yml
+##       /{label}/{application}-{profile}.yml
+##       /{application}-{profile}.properties
+##       /{label}/{application}-{profile}.properties
   application:
-    name: foobar
+    name: tmall   #服务名称与config server访问格式中的"application"对应
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#如果以上配置写在本文件中，先加载bootstrap.*中的这段配置命中到远程 ,再链接config server加载远程配置，再加载application.*，最后再加载bootstrap中的配置
+#以上配置写在application.yml中,*** 这段配置不会生效！！！不会加载远程配置！！！ ***,先加载application.*中的所自定义配置,再加载bootstrap中的自定义配置。
+#----如果@value在靠前的加载流程中读取到自定义的属性值，则不再在后续的流程中读取相应的值了，因为Spring注入的默认是单例。
+#profile: profile-boot
+#server:
+#  port: 8082
 
-
-#先加载bootstrap.* ,再加载远程配置，再加载application.*
+#bootstrap.yml中的自定义属性值无法读取？经过测试，自定义的属性值的加载顺序为：远程-->application.*-->bootstrap.*

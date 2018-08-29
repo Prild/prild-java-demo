@@ -30,7 +30,7 @@ public class LockReadAndWriteTest {
 }
 
 class Queue3{
-    private Object data = null;//共享数据，只能有一哥线程能写
+    private Object data = null;//共享数据，只能有一个线程能写
     private ReadWriteLock rwl = new ReentrantReadWriteLock();
 
     public void get(){

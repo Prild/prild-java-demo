@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 //两个线程放数据，一个线程取数据
 public class BlockingQueueTest {
 	public static void main(String[] args) {
-		final BlockingQueue queue = new ArrayBlockingQueue(3);		//长读为3的队列
+		final BlockingQueue queue = new ArrayBlockingQueue(3);		//长度为3的队列
 		for(int i=0;i<2;i++){
 			new Thread(){
 				public void run(){
@@ -19,10 +19,8 @@ public class BlockingQueueTest {
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
-
 					}
 				}
-				
 			}.start();
 		}
 		
@@ -41,7 +39,6 @@ public class BlockingQueueTest {
 					}
 				}
 			}
-			
 		}.start();			
 	}
 }

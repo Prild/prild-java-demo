@@ -15,7 +15,7 @@ public class LockTest {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    nameOutputer.outPut2("赵伊荔");
+                    nameOutputer.outPut("赵伊荔");
                 }
             }
         }).start();
@@ -28,7 +28,7 @@ public class LockTest {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    nameOutputer.outPut2("张三三");
+                    nameOutputer.outPut("张三三");
                 }
             }
         }).start();

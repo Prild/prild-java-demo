@@ -1,3 +1,19 @@
 server:
-  port: 8081
+  port: 8085
+#profile: profile-app
+#spring:
+#  cloud:
+#    config:
+#      uri: http://localhost:8080
+#      profile: msn    #"profile" 与config server访问格式中的profile对应
+#      label: master   #当config server的后端存储的是git时，默认就是master
+      #Located environment: name=aos, profiles=[msn], label=master
+#对应http服务访问具有以下格式的资源：
+#       /{application}/{profile}[/{label}]
+#       /{application}-{profile}.yml
+#       /{label}/{application}-{profile}.yml
+#       /{application}-{profile}.properties
+#       /{label}/{application}-{profile}.properties
+#  application:
+#    name: aos   #服务名称与config server访问格式中的"application"对应
 

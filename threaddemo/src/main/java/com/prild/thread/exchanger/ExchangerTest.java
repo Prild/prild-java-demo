@@ -4,8 +4,8 @@ import java.util.concurrent.Exchanger;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+//两个线程的数据交换
 public class ExchangerTest {
-
 	public static void main(String[] args) {
         ExecutorService service = Executors.newCachedThreadPool();
 		final Exchanger exchanger = new Exchanger();

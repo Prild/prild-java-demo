@@ -15,10 +15,10 @@ public class CountDownLatchTest {
                 public void run(){
                     try {
                         System.out.println("线程" + Thread.currentThread().getName() +
-                                "正准备接受命名");
+                                "正准备接受命令");
                         cdOrder.await();
                         System.out.println("线程" + Thread.currentThread().getName() +
-                                "已经接受命名");
+                                "已经接受命令");
                         Thread.sleep((long)(Math.random()*10000));
                         System.out.println("线程" + Thread.currentThread().getName() +
                                 "回应命令处理结果");
@@ -45,6 +45,5 @@ public class CountDownLatchTest {
             e.printStackTrace();
         }
         service.shutdown();
-
     }
 }
