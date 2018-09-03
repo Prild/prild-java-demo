@@ -27,7 +27,7 @@
     <userTask id="hr_approve" name="人事审批">
       <extensionElements>
         <activiti:formProperty id="hrApprove" name="人事审批结果" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="hrMessage" name="人事备注" required="true"></activiti:formProperty>
+        <activiti:formProperty id="hrMessage" name="人事备注" type="string" required="true"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow5" sourceRef="decideTLApprove" targetRef="hr_approve">
@@ -36,7 +36,9 @@
     <exclusiveGateway id="decideHTApprove" name="人事审批校验"></exclusiveGateway>
     <sequenceFlow id="flow6" sourceRef="hr_approve" targetRef="decideHTApprove"></sequenceFlow>
     <endEvent id="endevent" name="结束"></endEvent>
-    <sequenceFlow id="flow7" sourceRef="decideHTApprove" targetRef="endevent"></sequenceFlow>
+    <sequenceFlow id="flow7" sourceRef="decideHTApprove" targetRef="endevent">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${hrApprove=="Y" || hrApprove =="y"}]]></conditionExpression>
+    </sequenceFlow>
     <endEvent id="endeventCancel" name="取消"></endEvent>
     <sequenceFlow id="flow8" sourceRef="decideSubmit" targetRef="endeventCancel">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${submitType=="N" || submitType=="n"}]]></conditionExpression>
@@ -44,7 +46,9 @@
     <sequenceFlow id="flow9" sourceRef="decideTLApprove" targetRef="submitForm">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${tlApprove=="n" || tlApprove =="N"}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow10" sourceRef="decideHTApprove" targetRef="submitForm"></sequenceFlow>
+    <sequenceFlow id="flow10" sourceRef="decideHTApprove" targetRef="submitForm">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${hrApprove=="N" || hrApprove =="n"}]]></conditionExpression>
+    </sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_second_approve">
     <bpmndi:BPMNPlane bpmnElement="second_approve" id="BPMNPlane_second_approve">
