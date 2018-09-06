@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/prild/Desktop/git/prild-java-demo/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2197758735.index
+3940359868.index
+2180261117.index
+632031411.index
+3807597710.index
+1606629609.index

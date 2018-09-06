@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+
+        <!-- eventListeners: 监听所有事件派发通知 -->
+        <!--<property name="eventListeners" >-->
+            <!--<list>-->
+                <!--<bean class="com.thank.activiti.event.ProcessEventListener" />-->
+            <!--</list>-->
+        <!--</property>-->
+
+        <!-- eventListeners: 监听自定义事件派发通知 -->
+        <!--<property name="eventListeners" >-->
+            <!--<list>-->
+                <!--<bean class="com.thank.activiti.event.CustomEventListener" />-->
+            <!--</list>-->
+        <!--</property>-->
+
+        <!-- typeEventListeners: 监听指定事件类型的通知 -->
+        <!--<property name="typedEventListeners">-->
+            <!--<map>-->
+                <!--<entry key="PROCESS_STARTED">-->
+                    <!--<list>-->
+                        <!--<bean class="com.thank.activiti.event.ProcessEventListener" />-->
+                    <!--</list>-->
+                <!--</entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    </bean>
+
+
+</beans>

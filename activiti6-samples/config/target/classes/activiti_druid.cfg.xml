@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="processEngineConfiguration"
+          class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="databaseSchemaUpdate" value="true" />
+
+        <!-- 扩充两个属性 -->
+        <!-- 默认为true, 表示流程结束后的数据会迁移到历史表中, 如果为false, 则会直接删除 -->
+        <property name="dbHistoryUsed" value="true"/>
+        <!-- 默认为true, 表示是否用它提供的用户权限和角色, 如果要和业务系统的用户角色结合, 可以不用他的, 设为false -->
+        <property name="dbIdentityUsed" value="true"/>
+        <!-- 生成系统表的前缀 -->
+        <property name="databaseTablePrefix" value="db_"/>
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/activiti6unittest?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" />
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="username" value="root"/>
+        <property name="password" value="tianfeifei" />
+        <property name="initialSize" value="1" />
+        <property name="maxActive" value="10"/>
+        <property name="filters" value="stat,slf4j"/>
+    </bean>
+</beans>
