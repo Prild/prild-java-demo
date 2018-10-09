@@ -28,7 +28,6 @@ public class SubProcessTest {
     @Deployment(resources = {"my-process-subprocess1.bpmn20.xml"})
     public void testSubProcess1() {
         activitiRule.getRuntimeService().startProcessInstanceByKey("my-process");
-
         Task task = activitiRule.getTaskService().createTaskQuery().singleResult();
         Assert.assertEquals("订单完成", task.getName());
     }

@@ -13,14 +13,9 @@ import java.util.Map;
 
 /**
  * description:
- *
- * @author xiefayang
- * 2018/6/22 11:25
  */
 public class DbRuntimeTest {
-
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(DbRuntimeTest.class);
-
     @Rule
     public ActivitiRule activitiRule = new ActivitiRule("activiti-mysql.cfg.xml");
 
@@ -35,7 +30,6 @@ public class DbRuntimeTest {
         activitiRule.getRuntimeService().startProcessInstanceByKey("second_approve", variables);
     }
 
-
     /**
      * 测试设置拥有人(ACT_RU_IDENTITYLINK: 参与者信息表)
      */
@@ -46,7 +40,6 @@ public class DbRuntimeTest {
         taskService.setOwner(task.getId(), "thank");
     }
 
-
     /**
      * 设置开始节点中message事件订阅(ACT_RU_EVENT_SUBSCR: 事件订阅/监听信息表)
      * 接受到这个信号, 就可以启动流程实例
@@ -55,7 +48,6 @@ public class DbRuntimeTest {
     public void testMessage() {
         activitiRule.getRepositoryService().createDeployment().addClasspathResource("my-process-message.bpmn20.xml").deploy();
     }
-
 
     /**
      * 设置了节点中的message事件订阅
@@ -66,7 +58,6 @@ public class DbRuntimeTest {
         activitiRule.getRepositoryService().createDeployment().addClasspathResource("my-process-message-received.bpmn20.xml").deploy();
         activitiRule.getRuntimeService().startProcessInstanceByKey("my-process");
     }
-
 
     @Test
     public void testJob() throws InterruptedException {

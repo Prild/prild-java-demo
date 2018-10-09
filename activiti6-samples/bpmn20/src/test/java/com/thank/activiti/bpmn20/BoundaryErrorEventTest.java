@@ -15,20 +15,17 @@ import java.util.Map;
  *   其中包括了错误事件, 边界事件, 并行网关, 排他网关等知识点
  */
 public class BoundaryErrorEventTest extends PluggableActivitiTestCase {
-
     @Override
     protected void setUp() throws Exception {
         super.setUp();
         // Normally the UI will do this automatically for us
         Authentication.setAuthenticatedUserId("kermit");
     }
-
     @Override
     protected void tearDown() throws Exception {
         Authentication.setAuthenticatedUserId(null);
         super.tearDown();
     }
-
     @Deployment(resources = { "reviewSalesLead.bpmn20.xml" })
     public void testReviewSalesLeadProcess() {
         // After starting the process, a task should be assigned to the 'initiator' (normally set by GUI)
@@ -76,5 +73,4 @@ public class BoundaryErrorEventTest extends PluggableActivitiTestCase {
         assertEquals(0, finalTaskList.size());
         assertProcessEnded(processInstanceId);
     }
-
 }

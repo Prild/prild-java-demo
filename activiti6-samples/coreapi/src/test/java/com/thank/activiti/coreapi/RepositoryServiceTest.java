@@ -32,7 +32,7 @@ public class RepositoryServiceTest {
         deploymentBuilder.name("测试部署资源1")
                 .addClasspathResource("my-process.bpmn20.xml")
                 .addClasspathResource("second_approve.bpmn20.xml");
-        Deployment deployment = deploymentBuilder.deploy();
+        Deployment deployment = deploymentBuilder.deploy();     //deploy之后，将一个部署对象 两个流程定义文件，部署到数据库
         logger.debug("deployment: ", deployment);
 
         DeploymentBuilder deploymentBuilder1 = repositoryService.createDeployment();

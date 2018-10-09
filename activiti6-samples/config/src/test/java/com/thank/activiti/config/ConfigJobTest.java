@@ -16,16 +16,12 @@ import java.util.List;
  * 测试作业执行器Job Executor
  */
 public class ConfigJobTest {
-
     private static final Logger logger = LoggerFactory.getLogger(ConfigJobTest.class);
-
     @Rule
     public ActivitiRule activitiRule = new ActivitiRule("activiti_job.cfg.xml");
-
     @Test
     @Deployment(resources = {"my-process_job.bpmn20.xml"})
     public void test() throws InterruptedException {
-
         logger.debug("---------开始----------");
         List<Job> jobs = activitiRule.getManagementService().createTimerJobQuery().listPage(0, 100);
         logger.debug("jobs.size:{}", jobs.size());
@@ -33,5 +29,4 @@ public class ConfigJobTest {
         Thread.sleep(1000 * 100);
         logger.debug("---------结束----------");
     }
-
 }

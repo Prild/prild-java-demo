@@ -17,9 +17,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * description: 测试资源文件表
- *
- * @author xiefayang
- * 2018/6/22 11:25
  */
 public class DbIdentityTest {
 
@@ -52,5 +49,4 @@ public class DbIdentityTest {
         identityService.setUserInfo(user1.getId(),"age","18");
         identityService.setUserInfo(user1.getId(),"address","bei jing");
     }
-
 }

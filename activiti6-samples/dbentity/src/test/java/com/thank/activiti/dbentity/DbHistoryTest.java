@@ -14,19 +14,10 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-/**
- * description: 测试资源文件表
- *
- * @author xiefayang
- * 2018/6/22 11:25
- */
 public class DbHistoryTest {
-
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(DbHistoryTest.class);
-
     @Rule
     public ActivitiRule activitiRule = new ActivitiRule("activiti-mysql.cfg.xml");
-
     /**
      * 测试: 分别对应ACT_HI_*中的多张表
      */
@@ -55,7 +46,4 @@ public class DbHistoryTest {
         // 通过form方式提交的任务表单会存储在ACT_HI_DETAIL(历史变更)中, 而task方式不会
         activitiRule.getFormService().submitTaskFormData(task.getId(), formVariables);
     }
-
-
-
 }

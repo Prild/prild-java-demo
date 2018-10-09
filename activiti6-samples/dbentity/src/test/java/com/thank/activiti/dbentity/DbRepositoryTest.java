@@ -35,9 +35,9 @@ public class DbRepositoryTest {
     @Test
     public void testSuspend() {
         RepositoryService repositoryService = activitiRule.getRepositoryService();
-        repositoryService.suspendProcessDefinitionById("second_approve:1:2504");
+        repositoryService.suspendProcessDefinitionById("second_approve:1:5004");
 
-        Assert.assertTrue(repositoryService.isProcessDefinitionSuspended("second_approve:1:2504"));
+        Assert.assertTrue(repositoryService.isProcessDefinitionSuspended("second_approve:1:5004"));
     }
 
 }

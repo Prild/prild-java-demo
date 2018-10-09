@@ -1,0 +1,33 @@
+
+spring:
+  freemarker:
+    check-template-location: false
+  activiti:
+    check-process-definitions: false
+  jpa:
+    properties:
+      hibernate:
+        cache:
+          use_second_level_cache: false
+    open-in-view: true
+    generate-ddl: false
+  liquibase:
+    enabled: true
+    change-log: classpath:activiti-app-db-changelog.xml
+#    change-log: classpath*:META-INF/liquibase/activiti-app-db-changelog.xml #这种方式我也不知道为啥找不到
+  aop:
+    proxy-target-class: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/workflow?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: tianfeifei
+server:
+  port: 8080
+  servlet:
+    context-path: "/wf"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

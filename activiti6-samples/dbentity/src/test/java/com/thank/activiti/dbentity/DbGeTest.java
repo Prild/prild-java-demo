@@ -10,9 +10,6 @@ import org.junit.Test;
 
 /**
  * description: 测试资源文件表
- *
- * @author xiefayang
- * 2018/6/22 11:25
  */
 public class DbGeTest {
 

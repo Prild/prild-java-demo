@@ -44,7 +44,7 @@ public class FormServiceTest {
         startFormPropertyList.forEach(formProperty -> logger.debug("start formProperty = {}", ToStringBuilder.reflectionToString(formProperty,ToStringStyle.JSON_STYLE)));
 
         Map<String, String> startFormParams = ImmutableMap.of("message", "hello world");
-        formService.submitStartFormData(processDefinition.getId(), startFormParams);
+        ProcessInstance processInstance = formService.submitStartFormData(processDefinition.getId(), startFormParams);
 
         Task task = activitiRule.getTaskService().createTaskQuery().singleResult();
 

@@ -206,6 +206,7 @@ public class RuntimeServiceTest {
         ProcessInstance processInstance = runtimeService
                 .startProcessInstanceByMessage("my-message");
 //                .startProcessInstanceByKey("my-process");
+        logger.debug("processInstance = {}", processInstance);
         Assert.assertNotNull(processInstance);
     }
 }

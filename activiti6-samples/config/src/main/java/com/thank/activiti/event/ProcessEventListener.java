@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
  *   实现一个简单的功能, 在流程启动和结束的时候打印一句话
  */
 public class ProcessEventListener implements ActivitiEventListener {
-
     private static final Logger logger = LoggerFactory.getLogger(ProcessEventListener.class);
 
     @Override
