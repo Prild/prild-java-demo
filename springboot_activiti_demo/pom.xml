@@ -39,11 +39,34 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--activiti begin-->
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-engine</artifactId>
+			<version>5.22.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-simple-workflow</artifactId>
+			<version>5.22.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring-boot-starter-actuator</artifactId>
+			<version>5.22.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-modeler</artifactId>
+			<version>5.22.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-spring-boot-starter-basic</artifactId>
 			<version>5.22.0</version>
 		</dependency>
+		<!--activiti end-->
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -55,7 +78,31 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
-        <!--<dependency>-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<!-- alibaba fast json-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.30</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!--<dependency>-->
             <!--<groupId>net.sf.json-lib</groupId>-->
             <!--<artifactId>json-lib</artifactId>-->
             <!--<version>2.4</version>-->
