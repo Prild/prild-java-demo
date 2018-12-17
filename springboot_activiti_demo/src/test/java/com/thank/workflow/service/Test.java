@@ -29,7 +29,7 @@ public class Test {
         BpmnModel model = new BpmnModel();
         Process process=new Process();
         model.addProcess(process);
-        final String PROCESSID ="process01";
+        final String PROCESSID ="process001";
         final String PROCESSNAME ="测试01";
         process.setId(PROCESSID);
         process.setName(PROCESSNAME);

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.inxedu.dao.ArticleDao_">
+
+	<sql id="edu_article_column">
+	EDU_ARTICLE.ARTICLE_ID,
+	EDU_ARTICLE.TITLE,
+	EDU_ARTICLE.SUMMARY,
+	EDU_ARTICLE.IMAGE_URL,
+	EDU_ARTICLE.SOURCE,
+	EDU_ARTICLE.AUTHOR,
+	EDU_ARTICLE.CREATE_TIME,
+	EDU_ARTICLE.PUBLISH_TIME,
+	EDU_ARTICLE.ARTICLE_TYPE,
+	EDU_ARTICLE.CLICK_NUM,
+	EDU_ARTICLE.PRAISE_COUNT,
+	EDU_ARTICLE.COMMENT_NUM,
+	EDU_ARTICLE.SORT
+	</sql>
+	<sql id="edu_article_property">
+	#{articleId},
+	#{title},
+	#{summary},
+	#{imageUrl},
+	#{source},
+	#{author},
+	#{createTime},
+	#{publishTime},
+	#{type},
+	#{clickNum},
+	#{praiseCount},
+	#{commentNum},
+	#{sort}
+	</sql>
+	
+	<sql id="edu_article_content_column">
+	EDU_ARTICLE_CONTENT.ARTICLE_ID,
+	EDU_ARTICLE_CONTENT.CONTENT
+	</sql>
+	<sql id="edu_article_content_property">
+	#{articleId},#{content}
+	</sql>
+	
+	<resultMap type="Article_" id="ArticleResult">
+	<result property="articleId" column="ARTICLE_ID"/>
+	<result property="title" column="TITLE"/>
+	<result property="summary" column="SUMMARY"/>
+	<result property="imageUrl" column="IMAGE_URL"/>
+	<result property="source" column="SOURCE"/>
+	<result property="author" column="AUTHOR"/>
+	<result property="createTime" column="CREATE_TIME"/>
+	<result property="publishTime" column="PUBLISH_TIME"/>
+	<result property="type" column="ARTICLE_TYPE"/>
+	<result property="clickNum" column="CLICK_NUM"/>
+	<result property="praiseCount" column="PRAISE_COUNT"/>
+	<result property="commentNum" column="COMMENT_NUM"/>
+	<result property="sort" column="SORT"/>
+
+	</resultMap>
+	<!-- start:创建 文章/添加文章内容 -->
+	<insert id="createArticle" parameterType="Article_" useGeneratedKeys="true" keyProperty="articleId" keyColumn="ARTICLE_ID">
+	INSERT INTO EDU_ARTICLE(<include refid="edu_article_column"/>) VALUE(<include refid="edu_article_property"/>)
+	</insert>
+	<insert id="addArticleContent" parameterType="ArticleContent">
+	INSERT INTO EDU_ARTICLE_CONTENT(<include refid="edu_article_content_column"/>) 
+	VALUE(<include refid="edu_article_content_property"/>)
+	</insert>
+	<!-- end: -->
+	
+	<!-- start:更新 文章/更新文章内容 -->
+	<update id="updateArticle" parameterType="Article_">
+	UPDATE EDU_ARTICLE SET 
+	EDU_ARTICLE.TITLE=#{title},
+	EDU_ARTICLE.SUMMARY=#{summary},
+	EDU_ARTICLE.IMAGE_URL=#{imageUrl},
+	EDU_ARTICLE.SOURCE=#{source},
+	EDU_ARTICLE.CLICK_NUM=#{clickNum},
+	EDU_ARTICLE.AUTHOR=#{author},
+	EDU_ARTICLE.PUBLISH_TIME=#{publishTime},
+	EDU_ARTICLE.ARTICLE_TYPE=#{type},
+	EDU_ARTICLE.SORT=#{sort}
+	WHERE EDU_ARTICLE.ARTICLE_ID=#{articleId}
+	</update>
+	<update id="updateArticleContent" parameterType="ArticleContent">
+	UPDATE EDU_ARTICLE_CONTENT SET
+	EDU_ARTICLE_CONTENT.CONTENT=#{content} 
+	WHERE EDU_ARTICLE_CONTENT.ARTICLE_ID=#{articleId}
+	</update>
+	<!-- end: -->
+	
+	<!-- start:删除 文章/删除文章内容 -->
+	<delete id="deleteArticleByIds" parameterType="java.lang.String">
+	<!-- DELETE FROM EDU_ARTICLE WHERE EDU_ARTICLE.ARTICLE_ID IN (${array}) -->
+	DELETE FROM EDU_ARTICLE WHERE EDU_ARTICLE.ARTICLE_ID IN <foreach collection="array" item="id" open="(" separator="," close=")">#{id}</foreach>
+	</delete>
+	<delete id="deleteArticleContentByArticleIds" parameterType="java.lang.String">
+	<!-- DELETE FROM EDU_ARTICLE_CONTENT WHERE EDU_ARTICLE_CONTENT.ARTICLE_ID IN (${array}) -->
+	DELETE FROM EDU_ARTICLE_CONTENT WHERE EDU_ARTICLE_CONTENT.ARTICLE_ID IN <foreach collection="array" item="id" open="(" separator="," close=")">#{id}</foreach>
+	</delete>
+	<!-- end: -->
+	
+	<!-- start:通过ID查询 文章/通过ID查询文章内容 -->
+	<select id="queryArticleById" parameterType="int" resultMap="ArticleResult">
+	SELECT <include refid="edu_article_column"/> FROM EDU_ARTICLE WHERE EDU_ARTICLE.ARTICLE_ID=#{0}
+	</select>
+	<select id="queryArticleContentByArticleId" parameterType="int" resultType="java.lang.String">
+	SELECT EDU_ARTICLE_CONTENT.CONTENT FROM EDU_ARTICLE_CONTENT WHERE EDU_ARTICLE_CONTENT.ARTICLE_ID =#{0}
+	</select>
+	<!-- end: -->
+	
+	<!--  start:分页查询文章列表 -->
+	<select id="queryArticlePage" parameterType="java.util.Map" resultMap="ArticleResult">
+	SELECT <include refid="edu_article_column"/> FROM EDU_ARTICLE  where 1=1 
+		<if test="param1.type>0">
+			AND EDU_ARTICLE.ARTICLE_TYPE=#{param1.type}
+		</if>
+		<if test="param1.beginCreateTime!=null and param1.beginCreateTime!=''">
+			AND EDU_ARTICLE.CREATE_TIME >= #{param1.beginCreateTime}
+		</if>
+		<if test="param1.endCreateTime!=null and param1.endCreateTime!=''">
+			AND <![CDATA[EDU_ARTICLE.CREATE_TIME <= #{param1.endCreateTime}]]>
+		</if>
+		<if test="param1.queryKey!=null and param1.queryKey!=''">
+			AND (EDU_ARTICLE.TITLE LIKE CONCAT('%',#{param1.queryKey},'%') OR EDU_ARTICLE.SOURCE LIKE CONCAT('%',#{param1.queryKey},'%') OR EDU_ARTICLE.AUTHOR LIKE CONCAT('%',#{param1.queryKey},'%'))
+		</if>
+	order by sort desc,PUBLISH_TIME desc
+	</select>
+	<!-- end: -->
+	
+	<!-- start:更新文章浏览量 -->
+	<update id="updateArticleNum" parameterType="Map">
+	UPDATE EDU_ARTICLE SET 
+	<if test="type=='clickNum'">
+	CLICK_NUM=CLICK_NUM${num} 
+	</if>
+	<if test="type=='praiseCount'">
+	PRAISE_COUNT=PRAISE_COUNT${num} 
+	</if>
+	<if test="type=='commentCount'">
+	COMMENT_NUM=COMMENT_NUM${num} 
+	</if>
+	WHERE 
+	EDU_ARTICLE.ARTICLE_ID=#{articleId}
+	</update>
+	<!-- end: -->
+	
+	<!-- 前台：公共多条件查询文章资讯列表 -->
+	<select id="queryArticleList" parameterType="QueryArticle_" resultMap="ArticleResult">
+	SELECT <include refid="edu_article_column"/> FROM EDU_ARTICLE 
+	WHERE
+	<if test="e.type>0">
+	EDU_ARTICLE.ARTICLE_TYPE=#{e.type}
+	</if>
+	<if test="e.orderby==0">
+	ORDER BY EDU_ARTICLE.CREATE_TIME DESC
+	</if>
+	<if test="e.orderby==1">
+	ORDER BY EDU_ARTICLE.CLICK_NUM DESC
+	</if>
+	<if test="e.count>0">
+	LIMIT #{e.count}
+	</if>
+	</select>
+	
+	<!-- 查询上一篇或下一篇文章 -->
+	<select id="queryUpOrDownArticle" parameterType="java.util.Map" resultMap="ArticleResult">
+	SELECT <include refid="edu_article_column"/> FROM EDU_ARTICLE 
+	WHERE
+	<if test="keyWord=='UP'">
+	AND <![CDATA[EDU_ARTICLE.ARTICLE_ID <#{articleId}]]> ORDER BY ARTICLE_ID DESC
+	</if>
+	<if test="keyWord=='DOWN'">
+	AND <![CDATA[EDU_ARTICLE.ARTICLE_ID >#{articleId}]]> ORDER BY ARTICLE_ID ASC
+	</if>
+	LIMIT 1
+	</select>
+	
+	<!-- 获取所有文章总记录数 -->
+	<select id="queryAllArticleCount" resultType="int">
+	SELECT COUNT(1) FROM EDU_ARTICLE
+	</select>
+</mapper>

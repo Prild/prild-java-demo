@@ -1,10 +1,13 @@
 package com.thank.workflow.service;
 
+import com.thank.workflow.model.ActivitiNode;
 import com.thank.workflow.model.WorkflowBean;
+import com.thank.workflow.utils.ActivitiNodeHelper;
+import org.activiti.bpmn.BpmnAutoLayout;
+import org.activiti.bpmn.model.BpmnModel;
+import org.activiti.bpmn.model.Process;
 import org.activiti.engine.*;
 import org.activiti.engine.form.TaskFormData;
-import org.activiti.engine.history.HistoricProcessInstance;
-import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.history.HistoricVariableInstance;
 import org.activiti.engine.impl.identity.Authentication;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
@@ -13,16 +16,16 @@ import org.activiti.engine.impl.pvm.process.ActivityImpl;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
-import org.activiti.engine.runtime.ProcessInstanceQuery;
 import org.activiti.engine.task.Comment;
 import org.activiti.engine.task.Task;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.activiti.engine.task.TaskQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestParam;
-import sun.plugin2.message.Message;
+import org.apache.commons.io.FileUtils;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,7 +56,7 @@ public class WorkflowService {
 
     private static final String RESOUTCE_PATH = "processes/";
 
-    public String saveNewDeploy(String fileName, String deploymentName) {
+    /*public String saveNewDeploy(String fileName, String deploymentName) {
 
         Deployment deployment = this.processEngine.getRepositoryService().createDeployment().name(deploymentName)
                 .addClasspathResource(RESOUTCE_PATH.concat(fileName).concat(".bpmn"))
@@ -61,6 +64,76 @@ public class WorkflowService {
                 .deploy();
 
         return deployment.toString();
+    }*/
+
+    public String saveNewDeploy(){
+
+        List<ActivitiNode> activitiNodeList = new ArrayList<>();
+        activitiNodeList.add(new ActivitiNode("empTask", "Emp Task", "2001,2002,2003","","2101,2102,2103"));
+        activitiNodeList.add(new ActivitiNode("ldTask", "Ld Task", "1001,1002","","1101,1102"));
+        activitiNodeList.add(new ActivitiNode("hrTask", "Hr Task", "3001","","3101"));
+        activitiNodeList.add(new ActivitiNode("acTask", "Ac Task", "4001","","4101"));
+
+
+        BpmnModel model = new BpmnModel();
+        Process process=new Process();
+        model.addProcess(process);
+        final String PROCESSKEY ="qj_process";
+        final String PROCESSNAME ="请假审批";
+        process.setId(PROCESSKEY);
+        process.setName(PROCESSNAME);
+
+        int index = 0;
+        for (ActivitiNode activitiNode : activitiNodeList) {
+            if (index == 0){
+                createFirstNode(process, activitiNode);
+            }else {
+                createMidNode(activitiNodeList, process, activitiNode , index);
+            }
+            if (index == 1){
+                process.addFlowElement(ActivitiNodeHelper.createSequenceFlow(activitiNodeList.get(index - 1).getId(), activitiNode.getId(), "", ""));
+            }else if (index > 1){
+                process.addFlowElement(ActivitiNodeHelper.createSequenceFlow("exclusiveGateway" + (index - 1), activitiNode.getId(), "同意", "${submitType=='1'}"));
+            }
+            index ++;
+        }
+
+
+        // 2. Generate graphical information
+        new BpmnAutoLayout(model).execute();
+
+        // 3. Deploy the process to the engine
+        Deployment deployment = processEngine.getRepositoryService().createDeployment().addBpmnModel(PROCESSKEY+".bpmn", model).name(PROCESSKEY+"_deployment").deploy();
+
+        return deployment.toString();
+    }
+
+    private void createMidNode(List<ActivitiNode> activitiNodeList, Process process, ActivitiNode activitiNode ,int index) {
+        String exclusiveGateway = "exclusiveGateway" + index;
+        //String endEvent = "endEvent" + index;
+
+        process.addFlowElement(ActivitiNodeHelper.createUserTask(activitiNode.getId(), activitiNode.getName(), activitiNode.getUsers(),activitiNode.getAssignee()));
+        process.addFlowElement(ActivitiNodeHelper.createExclusiveGateway(exclusiveGateway));
+        //process.addFlowElement(ActivitiNodeHelper.createEndEvent(endEvent));
+
+        process.addFlowElement(ActivitiNodeHelper.createSequenceFlow(activitiNode.getId(), exclusiveGateway, "", ""));
+        if (index == activitiNodeList.size() - 1){
+            //最终 节点
+            process.addFlowElement(ActivitiNodeHelper.createSequenceFlow(exclusiveGateway, "endEvent", "同意或不同意", "${submitType=='1' || submitType=='-1'}"));
+        }else {
+            //中间 节点
+            process.addFlowElement(ActivitiNodeHelper.createSequenceFlow(exclusiveGateway, "endEvent", "不同意", "${submitType=='-1'}"));
+        }
+        process.addFlowElement(ActivitiNodeHelper.createSequenceFlow(exclusiveGateway, activitiNodeList.get(0).getId(), "回退", "${submitType=='0'}"));
+    }
+
+    private void createFirstNode(Process process, ActivitiNode activitiNode) {
+        //第一个节点  开始--节点一
+        process.addFlowElement(ActivitiNodeHelper.createStartEvent());
+        process.addFlowElement(ActivitiNodeHelper.createUserTask(activitiNode.getId(), activitiNode.getName(), activitiNode.getUsers(),activitiNode.getAssignee()));
+        process.addFlowElement(ActivitiNodeHelper.createSequenceFlow("startEvent", activitiNode.getId(), "", ""));
+
+        process.addFlowElement(ActivitiNodeHelper.createEndEvent());
     }
 
 
@@ -77,7 +150,7 @@ public class WorkflowService {
     }
 
     public void deleteDeploy(String deploymentId) {
-        this.repositoryService.deleteDeployment(deploymentId, true);
+        this.repositoryService.deleteDeployment(deploymentId,true);
     }
 
     public InputStream findImageInputStream(String deploymentId, String imageName) {
@@ -85,11 +158,33 @@ public class WorkflowService {
     }
 
     public ProcessInstance startProcess(String processDefinitionKey, String bussinessKey, Map<String, Object> variables) {
-        return this.runtimeService.startProcessInstanceByKey(processDefinitionKey, bussinessKey, variables);
+        ProcessInstance processInstance = this.runtimeService.startProcessInstanceByKey(processDefinitionKey, bussinessKey, variables);
+        List<Task> list = this.taskService.createTaskQuery().processInstanceId(processInstance.getId()).list();
+        System.out.println("流程" + processInstance.getId() + "：待处理任务数量" + list.size());
+        for (Task task:list) {
+            taskService.complete(task.getId(),variables);
+        }
+        return processInstance;
     }
 
-    public List<Task> findTaskList(String userName) {
-        List<Task> taskList = this.taskService.createTaskQuery().taskAssignee(userName).list();
+    public ProcessInstance submit(String processInstanceId, Map<String, Object> variables) {
+        List<Task> list = this.taskService.createTaskQuery().processInstanceId(processInstanceId).list();
+        System.out.println("待处理任务数量" + list.size());
+        for (Task task:list) {
+            taskService.complete(task.getId(),variables);
+        }
+        return this.runtimeService.createProcessInstanceQuery()
+                .processInstanceId(processInstanceId).singleResult();
+    }
+
+    public List<Task> findTaskList(String processInstanceId,String userId) {
+        //List<Task> taskList = this.taskService.createTaskQuery().taskAssignee(userName).list();
+        List<Task> taskList = this.taskService.createTaskQuery().processInstanceId(processInstanceId).list();
+        List<Task> taskList0 = this.taskService.createTaskQuery().taskCandidateOrAssigned(userId).list();
+        List<Task> taskList1 = this.taskService.createTaskQuery().taskAssignee(userId).list();
+        List<Task> taskList2 = this.taskService.createTaskQuery().taskCandidateGroup(userId).list();
+        List<Task> taskList3 = this.taskService.createTaskQuery().taskCandidateUser(userId).list();
+
         return taskList;
     }
 
@@ -309,5 +404,6 @@ public class WorkflowService {
 
         return returnMap;
     }
+
 
 }

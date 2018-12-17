@@ -15,10 +15,10 @@
     </bean>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="url" value="jdbc:h2:mem:activiti"/>
-        <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="username" value="sa"/>
-        <property name="password" value=""/>
+        <property name="url" value="jdbc:mysql://106.14.114.152:3306/edl-new?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;allowMultiQueries=true"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Edl@2019!"/>
     </bean>
 
     <bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">

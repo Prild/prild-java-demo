@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/views">
+	
+		<!-- 不走布局的url -->
+	<excludes>
+		
+	</excludes>
+	
+	
+	
+	
+	<!-- 后台走的布局 ///////////////默认装饰页面, 在需要装饰的页面增加<meta name="decorator" content="default"/>-->
+	<decorator name="blank" page="layouts/blank.jsp" />
+	<decorator name="default" page="layouts/default.jsp" />
+	<decorator name="myself" page="layouts/myself.jsp" />
+		
+	
+	<!-- 手动装配 -->
+	<!-- edu前端走的布局 (这个地方如果使用 斜杠/ ,后台布局报jbox冲突)-->
+ 	<decorator name="edudefault" page="layouts/default_.jsp"/><!--  <meta name="decorator" content="edudefault"/> -->
+ 	<decorator name="myProfileInformation" page="layouts/myProfileInformation.jsp"/><!--  <meta name="decorator" content="edudefault"/> -->
+
+
+<!-- 自动装配 -->
+ <!-- 
+ 	<decorator name="edudefault" page="layouts/default_.jsp">
+		<pattern>/front/*/*</pattern>
+		<pattern>/front/*</pattern> 
+		<pattern>/index</pattern>
+		<pattern>/f</pattern> 
+		<pattern>/f/*</pattern>
+		<pattern>/f/**/*</pattern>
+		
+		<pattern>/static/*</pattern> 
+		<pattern>/static_/*</pattern>
+		<pattern>/css/*</pattern>
+		<pattern>/images/*</pattern>
+		<pattern>/*/ajax/*</pattern>
+		<pattern>/common/*</pattern>
+		<pattern>/act/*</pattern>
+	</decorator>
+ -->	
+	
+	
+	
+	
+	
+	<!-- CMS基础主题装饰页面(****************************暂时不做要求********************************) -->
+	<decorator name="cms_default_basic" page="modules/cms/front/themes/basic/layouts/default.jsp" />
+	<decorator name="cms_default_weixin" page="modules/cms/front/themes/weixin/layouts/default.jsp" />
+	
+</decorators>

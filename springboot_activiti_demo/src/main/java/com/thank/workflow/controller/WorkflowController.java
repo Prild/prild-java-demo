@@ -9,6 +9,7 @@ import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Comment;
+import org.activiti.engine.task.Task;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,12 +35,45 @@ public class WorkflowController {
     private WorkflowService workflowService;
 
     /**
-     * 发布流程
+     * 发布部署流程定义
      */
     @GetMapping("/newDeploy")
-    public String newDeploy(@RequestParam String fileName, @RequestParam String deploymentName) {
+    public String newDeploy() {
+        return this.workflowService.saveNewDeploy();
+    }
 
-        return this.workflowService.saveNewDeploy(fileName, deploymentName);
+    /**
+     * 删除部署信息
+     * @param deploymentId 流程部署ID
+     */
+    @GetMapping("/deleteDeploy")
+    public void deleteDeploy(@RequestParam String deploymentId) {
+        this.workflowService.deleteDeploy(deploymentId);
+    }
+
+    /**
+     * 启动流程实例
+     * @param processDefinitionKey 使用流程定义的Key启动
+     * @param bussinessKey 向正在执行的执行对象表中的BUSINESS_KEY字段添加业务数据, 同时就让流程关联业务
+     * @param variables 设置流程变量
+     */
+    @PostMapping("/startProcess")
+    public Object startProcess(@RequestParam String processDefinitionKey, @RequestParam String bussinessKey, @RequestBody Map<String, Object> variables) {
+        ProcessInstance processInstance = this.workflowService.startProcess(processDefinitionKey, bussinessKey, variables);
+        Map<String, Object> returnMap = new HashMap<>(16);
+
+        returnMap.put("processInstanceId", processInstance.getId());    //启动流程后流程实例id
+        returnMap.put("bussinessKey", processInstance.getBusinessKey());    //传的参数bussinessKey
+        return returnMap;
+    }
+
+    @PostMapping("/empSubmit")
+    public String empSubmit(@RequestParam String processInstanceId,@RequestBody Map<String,Object> variables){
+        ProcessInstance processInstance = this.workflowService.submit(processInstanceId,variables);
+        if (processInstance != null){
+            return processInstance.getId();
+        }
+        return null;
     }
 
     /**
@@ -53,20 +87,9 @@ public class WorkflowController {
 
         List<DeploymentBo> deploymentBoList = ActivitiEntity2BoConverter.toDeploymentBo(this.workflowService.findDeploymentList());
         List<ProcessDefinitionBo> processDefinitionBoList = ActivitiEntity2BoConverter.toProcessDefinitionBo(this.workflowService.findProcessDefinition());
-        resultMap.put("deploymentBoList", deploymentBoList);
-        resultMap.put("processDefinitionBoList", processDefinitionBoList);
+        resultMap.put("deploymentBoList", deploymentBoList);    //ACT_RE_DEPLOYMENT
+        resultMap.put("processDefinitionBoList", processDefinitionBoList);  //ACT_RE_PROCDEF_INFO
         return  resultMap;
-    }
-
-
-    /**
-     * 删除部署信息
-     * @param deploymentId 流程部署ID
-     */
-    @GetMapping("/deleteDeploy")
-    public void deleteDeploy(@RequestParam String deploymentId) {
-        this.workflowService.deleteDeploy(deploymentId);
-
     }
 
 
@@ -99,31 +122,13 @@ public class WorkflowController {
         }
     }
 
-
-    /**
-     * 启动流程实例
-     * @param processDefinitionKey 使用流程定义的Key启动
-     * @param bussinessKey 向正在执行的执行对象表中的BUSINESS_KEY字段添加业务数据, 同时就让流程关联业务
-     * @param variables 设置流程变量
-     */
-    @PostMapping("/startProcess")
-    public Object startProcess(@RequestParam String processDefinitionKey, @RequestParam String bussinessKey, @RequestBody Map<String, Object> variables) {
-
-        ProcessInstance processInstance = this.workflowService.startProcess(processDefinitionKey, bussinessKey, variables);
-        Map<String, Object> returnMap = new HashMap<>(16);
-
-        returnMap.put("processInstanceId", processInstance.getId());
-        returnMap.put("bussinessKey", processInstance.getBusinessKey());
-        return returnMap;
-    }
-
-
     /**
      * 获取任务列表
      */
     @GetMapping("/getTaskList")
-    public Object getTaskList(@RequestParam String userName) {
-        return this.workflowService.findTaskList(userName);
+    public String getTaskList(@RequestParam String processInstanceId,@RequestParam String userId) {
+        List<Task> taskList = this.workflowService.findTaskList(processInstanceId,userId);
+        return taskList.get(0).getId();
     }
 
 

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.inxedu.dao.StudentUserDao">
+	<sql id="edu_user_column">
+	EDU_USER.USER_ID,
+	EDU_USER.MOBILE,
+	EDU_USER.EMAIL,
+	EDU_USER.PASSWORD,
+	EDU_USER.USER_NAME,
+	EDU_USER.SHOW_NAME,
+	EDU_USER.SEX,
+	EDU_USER.AGE,
+	EDU_USER.CREATE_TIME,
+	EDU_USER.IS_AVALIBLE,
+	EDU_USER.PIC_IMG,
+	EDU_USER.BANNER_URL,
+	EDU_USER.MSG_NUM,
+	EDU_USER.SYS_MSG_NUM,
+	EDU_USER.LAST_SYSTEM_TIME
+	</sql>
+	<sql id="edu_user_property">
+	#{userId},
+	#{mobile},
+	#{email},
+	#{password},
+	#{userName},
+	#{showName},
+	#{sex},
+	#{age},
+	#{createTime},
+	#{isavalible},
+	#{picImg},
+	#{bannerUrl},
+	#{msgNum},
+	#{sysMsgNum},
+	#{lastSystemTime}
+	</sql>
+	<resultMap type="StudentUser" id="StudentUserResult">
+	<result property="userId" column="USER_ID"/>
+	<result property="mobile" column="MOBILE"/>
+	<result property="email" column="EMAIL"/>
+	<result property="password" column="PASSWORD"/>
+	<result property="userName" column="USER_NAME"/>
+	<result property="showName" column="SHOW_NAME"/>
+	<result property="sex" column="SEX"/>
+	<result property="age" column="AGE"/>
+	<result property="createTime" column="CREATE_TIME"/>
+	<result property="isavalible" column="IS_AVALIBLE"/>
+	<result property="picImg" column="PIC_IMG"/>
+	<result property="bannerUrl" column="BANNER_URL"/>
+	<result property="msgNum" column="MSG_NUM"/>
+	<result property="sysMsgNum" column="SYS_MSG_NUM"/>
+	<result property="lastSystemTime" column="LAST_SYSTEM_TIME"/>
+	</resultMap>
+	
+	<!-- 后台：更新提醒的消息数量 +1-->
+	<update id="updateUnReadMsgNumAddOne" >
+		update EDU_USER set 
+		<if test="falg=='msgNum'">
+		msg_num=msg_num+1
+		</if>
+		<if test="falg=='sysMsgNum'">
+		sys_msg_num=sys_msg_num+1
+		</if>
+		where
+		USER_ID=#{cusId}
+	</update>
+	
+	<!-- 后台： 更新学员状态(是否冻结) -->
+	<update id="updateUserStates"  >
+	UPDATE EDU_USER SET  EDU_USER.IS_AVALIBLE=#{isavalible}  where EDU_USER.USER_ID=#{userId}
+	</update>
+	
+	<!-- 后台： 查询学员列表 queryUserListPage(分页查询用户) -->
+	<select id="queryUserListPage"  parameterType="java.util.Map"  resultMap="StudentUserResult">
+	select <include refid="edu_user_column" /> from EDU_USER 
+	<where> 1=1
+	<if test="param1.isavalible != null and param1.isavalible != ''">and EDU_USER.IS_AVALIBLE = #{param1.isavalible}</if>
+	<if test="param1.keyWord!=null and param1.keyWord!=''">
+		AND (EDU_USER.MOBILE LIKE CONCAT('%',#{param1.keyWord},'%') OR EDU_USER.EMAIL LIKE CONCAT('%',#{param1.keyWord},'%') OR EDU_USER.USER_NAME LIKE CONCAT('%',#{param1.keyWord},'%') OR EDU_USER.SHOW_NAME LIKE CONCAT('%',#{param1.keyWord},'%'))
+	</if>
+	<if test="param1.beginCreateTime!=null and param1.beginCreateTime!= ''">and EDU_USER.create_Time>=#{param1.beginCreateTime}</if>
+	<if test="param1.endCreateTime!=null and param1.endCreateTime!= ''">and <![CDATA[  EDU_USER.create_Time<=#{param1.endCreateTime} ]]> </if>
+	</where>
+	</select>
+	
+		
+	<!--  前台/后台：更新学员密码 -->
+	<update id="updateUserPwd"  parameterType="StudentUser" >
+	UPDATE EDU_USER SET  EDU_USER.PASSWORD=#{e.password}  where EDU_USER.USER_ID=#{e.userId}
+	</update>
+	
+	<!-- 前台/后台：通过手机号或邮箱号查询用户信息 -->
+	<select id="queryUserByEmailOrMobile" parameterType="java.lang.String" resultMap="StudentUserResult">
+	SELECT <include refid="edu_user_column"/> FROM EDU_USER where
+	FIND_IN_SET(EMAIL,#{ids})
+	OR 
+	FIND_IN_SET(MOBILE,#{ids})
+	LIMIT 1
+	</select>
+			
+	<!-- 前台：通过用户ID，查询用户记录 -->
+	<select id="queryUserById" parameterType="int" resultMap="StudentUserResult">
+	SELECT <include refid="edu_user_column"/> FROM EDU_USER WHERE EDU_USER.USER_ID=#{0}
+	</select>
+	
+	<!--  前台：注册(后台对于学员是批量导入操作)-->
+	<insert id="createStudentUser"  parameterType="StudentUser"  useGeneratedKeys="true" keyColumn="USER_ID" keyProperty="userId">
+	insert into EDU_USER ( <include refid="edu_user_column" />) values (<include refid="edu_user_property" />)
+	</insert>
+	
+	<!-- 前台： 检查是否存在邮箱 (学员登录时检查)-->
+	<select id="checkEmail"  parameterType="string" resultType="boolean">
+	select count(*)  from EDU_USER where  EDU_USER.EMAIL = #{email}
+	</select>
+	<!-- 前台：  检查是否存在手机(学员登录时检查) -->
+	<select id="checkMobile"  parameterType="string" resultType="boolean">
+	select count(*)  from EDU_USER where  EDU_USER.mobile = #{mobile}
+	</select>
+	
+	<!-- 前台：用户登录 (手机或邮箱均可登录)-->
+	<select id="getLoginUser" parameterType="java.util.Map" resultMap="StudentUserResult">
+	SELECT <include refid="edu_user_column"/> FROM EDU_USER 
+	WHERE EDU_USER.PASSWORD=#{password} AND (EDU_USER.MOBILE=#{account} OR EDU_USER.EMAIL=#{account})
+	</select>
+	
+	<!-- 前台：修改用户信息(学员个人中心) -->
+	<update id="updateStudentUser" parameterType="StudentUser">
+	UPDATE EDU_USER SET 
+	EDU_USER.USER_NAME=#{userName},
+	EDU_USER.SHOW_NAME=#{showName},
+	EDU_USER.SEX=#{sex},
+	EDU_USER.AGE=#{age}
+	WHERE EDU_USER.USER_ID=#{userId}
+	</update>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

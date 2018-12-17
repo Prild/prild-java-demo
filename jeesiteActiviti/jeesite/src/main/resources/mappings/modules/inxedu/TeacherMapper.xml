@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.inxedu.dao.TeacherDao">
+
+	<resultMap id="TeacherResult" type="Teacher">
+		<result property="id_" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="education" column="EDUCATION" />
+		<result property="career" column="CAREER" />
+		<result property="isStar" column="IS_STAR" />
+		<result property="picPath" column="PIC_PATH" />
+		<result property="status" column="STATUS" />
+		<result property="createTime" column="CREATE_TIME" />
+		<result property="updateTime" column="UPDATE_TIME" />
+		<result property="subjectId" column="SUBJECT_ID" />
+		<result property="sort" column="SORT" />
+	</resultMap>
+	<sql id="edu_teacher_columns">
+		EDU_TEACHER.ID,
+		EDU_TEACHER.NAME,
+		EDU_TEACHER.EDUCATION,
+		EDU_TEACHER.CAREER,
+		EDU_TEACHER.IS_STAR,
+		EDU_TEACHER.PIC_PATH,
+		EDU_TEACHER.STATUS,
+		EDU_TEACHER.CREATE_TIME,
+		EDU_TEACHER.UPDATE_TIME,
+		EDU_TEACHER.SUBJECT_ID,
+		EDU_TEACHER.SORT
+	</sql>
+
+	<sql id="edu_teacher_properties">
+		#{id_},
+		#{name},
+		#{education},
+		#{career},
+		#{isStar},
+		#{picPath},
+		#{status},
+		#{createTime},
+		#{updateTime},
+		#{subjectId},
+		#{sort}
+	</sql>
+	
+		<!-- 添加老师 addTeacher-->
+	<insert id="addTeacher" parameterType="Teacher"  keyColumn="id" keyProperty="id_" useGeneratedKeys="true">
+		INSERT INTO EDU_TEACHER (
+		<include refid="edu_teacher_columns" />
+		)
+		VALUES(
+		<include refid="edu_teacher_properties" />
+		)
+	</insert>
+	
+	<!-- 删除讲师 -->
+	<delete id="deleteTeacherById"  parameterType="int">
+	UPDATE edu_teacher SET  EDU_TEACHER.STATUS=1  where EDU_TEACHER.ID=#{id_}
+	</delete>
+	
+	<!-- 修改讲师信息 -->
+	<update id="updateTeacher" parameterType="Teacher"> 
+	UPDATE edu_teacher SET 
+		EDU_TEACHER.NAME=#{name},
+		EDU_TEACHER.EDUCATION=#{education},
+		EDU_TEACHER.CAREER=#{career},
+		EDU_TEACHER.IS_STAR=#{isStar},
+		EDU_TEACHER.PIC_PATH=#{picPath},
+		EDU_TEACHER.STATUS=#{status},
+		EDU_TEACHER.UPDATE_TIME=#{updateTime},
+		EDU_TEACHER.SUBJECT_ID=#{subjectId},
+		EDU_TEACHER.SORT=#{sort}
+		where EDU_TEACHER.ID=#{id_}
+		
+	</update>
+	
+	<!-- 通过讲师ID，查询讲师数据 -->
+	
+	<select id="get" resultMap="TeacherResult" parameterType="int">
+	SELECT <include refid="edu_teacher_columns" /> FROM edu_teacher 
+	<where> edu_teacher.STATUS = 0 and edu_teacher.id=#{id_} </where>
+	</select>
+	
+	
+	<!-- 前台/后台：分页查询讲师列表 (分配有专业)-->
+	<select id="queryTeacherListPage" resultMap="TeacherResult" parameterType="java.util.Map" >
+	SELECT <include refid="edu_teacher_columns" /> FROM edu_teacher LEFT JOIN sys_subject ON edu_teacher.SUBJECT_ID = sys_subject.SUBJECT_ID
+	<where>edu_teacher.STATUS = 0 
+	<if test="param1.name != null and param1.name != ''"> and <![CDATA[edu_teacher.name LIKE CONCAT('%',#{param1.name},'%')  ]]></if>
+	<if test="param1.isStar!=null and param1.isStar!= ''">and edu_teacher.is_Star = #{param1.isStar}</if>
+	<if test="param1.beginCreateTime!=null and param1.beginCreateTime!= ''">and <![CDATA[ edu_teacher.create_Time>=#{param1.beginCreateTime} ]]> </if>
+	<if test="param1.endCreateTime!=null and param1.endCreateTime!= ''">and <![CDATA[  edu_teacher.create_Time<=#{param1.endCreateTime} ]]> </if>
+	<if test="param1.subjectId>0">and edu_teacher.subject_Id=#{param1.subjectId} or sys_subject.parent_id=#{param1.subjectId}</if>
+	<!-- 自定义param1 -->
+	</where> 
+	ORDER BY EDU_TEACHER.SORT DESC
+	</select>
+	
+	<!-- 前台/后台：查询课程讲师列表(根据课程id查询) -->
+	<select id="queryCourseTeacerList" parameterType="int" resultType="java.util.Map">
+		SELECT 
+			EDU_TEACHER.ID as id, 
+			EDU_TEACHER.NAME as name,
+			EDU_TEACHER.EDUCATION as education,
+			EDU_TEACHER.PIC_PATH as picPath,
+			EDU_TEACHER.CAREER as career
+		FROM EDU_TEACHER
+		LEFT JOIN EDU_COURSE_TEACHER ON EDU_COURSE_TEACHER.TEACHER_ID = EDU_TEACHER.ID
+		WHERE EDU_COURSE_TEACHER.COURSE_ID=#{value}
+	</select>
+	
+	<!--首页： 条件查询老师列表 -->
+	<select id="queryTeacherList" parameterType="QueryTeacher" resultMap="TeacherResult">
+		SELECT
+		<include refid="edu_teacher_columns" />
+		FROM EDU_TEACHER
+		WHERE EDU_TEACHER.STATUS=0
+		<if test="e.subjectId>0">
+			AND EDU_TEACHER.SUBJECT_ID=#{e.subjectId}
+		</if>
+		<if test="e.teacherId>0">
+			AND EDU_TEACHER.ID !=#{e.teacherId}
+		</if>
+		ORDER BY EDU_TEACHER.SORT DESC
+		<if test="e.count>0">
+			LIMIT #{e.count}
+		</if>
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

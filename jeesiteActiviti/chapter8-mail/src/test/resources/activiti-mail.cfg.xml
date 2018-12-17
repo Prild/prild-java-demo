@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="processEngineConfiguration"
+		class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+		<property name="databaseSchemaUpdate" value="true" />
+		<!-- <property name="mailServerPort" value="2025" /> -->
+		<property name="mailServerHost" value="smtp.sina.com" />
+		<property name="mailServerUseSSL" value="true" />
+		<property name="mailServerPort" value="465" />
+		<property name="mailServerUsername" value="sunsunshuang@sina.com" />
+		<property name="mailServerPassword" value="wocaonima123!" />
+	</bean>
+</beans>
